@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@700&display=swap');
+
+body {
+  background: linear-gradient(135deg, #fdf6e3 0%, #ffe7b2 100%);
+  color: #3b2f2f;
+  font-family: 'Montserrat', serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+header, footer {
+  background: linear-gradient(90deg, #fbe8c6 60%, #ffb347 100%);
+  padding: 2.5rem 1rem 2rem;
+  text-align: center;
+  border-bottom: 4px double #c38c4b;
+  box-shadow: 0 4px 16px rgba(200, 140, 75, 0.08);
+  font-family: 'Montserrat', serif;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #fffbe7;
+  color: #704214;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 2px 2px 0 #fffbe7, 4px 4px 0 #c38c4b;
+}
+
+nav {
+  background: #fbe8c6;
+  border-bottom: 2px solid #c9a66b;
+  padding: 1rem 0;
+}
+
+#searchForm {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  background: #fffbe7;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px #ffe7b2;
+  border: 2px solid #c38c4b;
+  overflow: hidden;
+}
+
+#searchInput {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  font-size: 1.1rem;
+  background: transparent;
+  color: #704214;
+  font-family: 'Montserrat', serif;
+  outline: none;
+}
+
+#searchForm button {
+  background: linear-gradient(90deg, #c38c4b 60%, #ffb347 100%);
+  color: #fff;
+  border: none;
+  padding: 0 1.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 1px;
+  transition: background 0.3s;
+}
+
+#searchForm button:hover {
+  background: #a46d35;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.song-card {
+  background: linear-gradient(120deg, #fffdf5 80%, #ffe7b2 100%);
+  border: 2.5px solid #d8b785;
+  border-radius: 18px;
+  box-shadow: 6px 6px 18px rgba(200, 140, 75, 0.13);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.song-card:hover {
+  transform: scale(1.025) rotate(-1deg);
+  box-shadow: 12px 12px 32px rgba(200, 140, 75, 0.18);
+  z-index: 2;
+}
+
+.song-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-bottom: 2px solid #c9a66b;
+  filter: sepia(0.15) contrast(1.1) saturate(1.2);
+}
+
+.song-content {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.song-title {
+  font-size: 1.45rem;
+  margin: 0.5rem 0 0.3rem;
+  color: #5e2b0e;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #ffe7b2;
+}
+
+.song-meta {
+  font-size: 0.95rem;
+  color: #6e4e32;
+  margin-bottom: 0.5rem;
+  opacity: 0.85;
+}
+
+audio {
+  width: 100%;
+  margin: 0.5rem 0;
+  filter: drop-shadow(0 2px 4px #ffe7b2);
+}
+
+.description {
+  font-size: 1rem;
+  flex: 1;
+  color: #4d2e00;
+  margin-bottom: 0.5rem;
+}
+
+.see-more {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.see-more a {
+  background: linear-gradient(90deg, #c38c4b 60%, #ffb347 100%);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 7px;
+  font-size: 0.95rem;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 1px;
+  box-shadow: 2px 2px 6px #ffe7b2;
+  transition: background 0.3s, color 0.3s;
+  border: none;
+}
+
+.see-more a:hover {
+  background: #a46d35;
+  color: #ffe7b2;
+}
+
+footer {
+  padding: 2rem 1rem;
+  border-top: 4px double #c9a66b;
+  border-radius: 0 0 18px 18px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  .song-image {
+    height: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+  .container {
+    padding: 0.5rem;
+  }
+  .song-card {
+    border-radius: 10px;
+  }
+  .song-image {
+    height: 120px;
+  }
+}

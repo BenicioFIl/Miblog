@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Queen · Sonidos del Ayer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Wiki Musical: Sonidos del ayer</h1>
+  </header>
+
+<nav>
+  <div style="display:flex;align-items:center;gap:1rem;justify-content:center;">
+    <a href="index.html" style="background:#c38c4b;color:#fff;padding:0.5rem 1.2rem;border-radius:7px;font-family:'Press Start 2P',cursive;text-decoration:none;font-size:1rem;box-shadow:0 2px 8px #c38c4b88;transition:background 0.2s;">
+      🏠 Inicio
+    </a>
+  </div>
+</nav>
+
+  <div class="container" style="max-width:700px; display:flex; flex-direction:column; align-items:center;">
+    <img src="bohemian.jpg" alt="Queen" class="song-image" style="max-width:350px; border-radius:18px; margin-bottom:1.5rem;">
+    <h2 class="song-title" style="text-align:center;">Queen</h2>
+    <div class="song-meta" style="text-align:center;">Reino Unido · Rock · 1970-presente</div>
+    <p class="description" style="margin-top:1.2rem;">
+      <strong>Queen</strong> es una de las bandas más emblemáticas del rock, conocida por su estilo teatral, la voz única de Freddie Mercury y su capacidad para fusionar géneros musicales. Canciones como "Bohemian Rhapsody", "We Will Rock You" y "Don't Stop Me Now" han dejado una huella imborrable en la historia de la música.
+    </p>
+    <p>
+      <b>Álbum destacado:</b> <i>A Night at the Opera</i> (1975)<br>
+      <b>Canción icónica:</b> Bohemian Rhapsody<br>
+      <b>Dato curioso:</b> "Bohemian Rhapsody" fue una de las primeras canciones en tener un videoclip promocional, considerado precursor del video musical moderno.
+    </p>
+    <div class="see-more" style="text-align:center;">
+      <a href="https://es.wikipedia.org/wiki/Queen" target="_blank">Leer más en Wikipedia</a>
+    </div>
+  </div>
+
+  <div id="player-bar" style="position:fixed;left:0;right:0;bottom:0;background:#222;color:#fff;display:flex;align-items:center;gap:1rem;padding:0.5rem 1rem;z-index:1000;box-shadow:0 -2px 12px #0008;">
+    <img id="player-img" src="bohemian.jpg" alt="Queen" style="width:48px;height:48px;object-fit:cover;border-radius:8px;">
+    <div>
+      <div id="player-title" style="font-weight:bold;">Bohemian Rhapsody</div>
+      <div id="player-meta" style="font-size:0.95em;opacity:0.7;">Queen · Álbum: A Night at the Opera (1975)</div>
+    </div>
+    <audio id="player-audio" controls style="flex:1;max-width:400px;margin:0 1rem;">
+      <source src="Bohemianrhapsody.mp3" type="audio/mp3">
+    </audio>
+    <button id="player-close" style="background:none;border:none;color:#fff;font-size:1.5em;cursor:pointer;">✕</button>
+  </div>
+
+  <footer>
+    &copy; 2025 - Sonidos del Ayer
+  </footer>
+    
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const playerBar = document.getElementById('player-bar');
+      const playerAudio = document.getElementById('player-audio');
+      const playerClose = document.getElementById('player-close');
+      playerAudio.volume = 0.5;
+      playerAudio.play().catch(()=>{});
+
+      playerClose.addEventListener('click', () => {
+        playerAudio.pause();
+        playerBar.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>

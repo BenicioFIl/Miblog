@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto · Sonidos del Ayer</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-form {
+      max-width: 420px;
+      margin: 2.5rem auto;
+      background: #fffbe7;
+      border-radius: 12px;
+      box-shadow: 2px 2px 12px #ffe7b2;
+      border: 2px solid #c38c4b;
+      padding: 2rem 2rem 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .contact-form label {
+      font-family: 'Montserrat', serif;
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+      color: #704214;
+    }
+    .contact-form input, .contact-form textarea {
+      font-family: 'Montserrat', serif;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1.5px solid #c38c4b;
+      padding: 0.6rem;
+      background: #fff;
+      color: #3b2f2f;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .contact-form textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+    .contact-form button {
+      background: linear-gradient(90deg,#c38c4b 60%,#ffb347 100%);
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      padding: 0.7rem 1.5rem;
+      font-family: 'Press Start 2P',cursive;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: #ffb347;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contacto · Sonidos del Ayer</h1>
+  </header>
+<nav>
+  <div style="display:flex;align-items:center;gap:1rem;justify-content:center;">
+    <a href="index.html" style="background:#c38c4b;color:#fff;padding:0.5rem 1.2rem;border-radius:7px;font-family:'Press Start 2P',cursive;text-decoration:none;font-size:1rem;box-shadow:0 2px 8px #c38c4b88;transition:background 0.2s;">
+      🏠 Inicio
+    </a>
+  </div>
+</nav>
+  <form class="contact-form" autocomplete="off">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+  <footer style="margin-top: 7.75rem;">
+    &copy; 2025 - Sonidos del Ayer
+  </footer>

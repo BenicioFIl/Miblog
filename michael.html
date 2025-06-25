@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Michael Jackson · Sonidos del Ayer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Wiki Musical: Sonidos del ayer</h1>
+  </header>
+
+<nav>
+  <div style="display:flex;align-items:center;gap:1rem;justify-content:center;">
+    <a href="index.html" style="background:#c38c4b;color:#fff;padding:0.5rem 1.2rem;border-radius:7px;font-family:'Press Start 2P',cursive;text-decoration:none;font-size:1rem;box-shadow:0 2px 8px #c38c4b88;transition:background 0.2s;">
+      🏠 Inicio
+    </a>
+  </div>
+</nav>
+
+  <div class="container" style="max-width:700px; display:flex; flex-direction:column; align-items:center;">
+    <img src="billiejean.jpg" alt="Michael Jackson" class="song-image" style="max-width:350px; border-radius:18px; margin-bottom:1.5rem;">
+    <h2 class="song-title" style="text-align:center;">Michael Jackson</h2>
+    <div class="song-meta" style="text-align:center;">Estados Unidos · Pop · 1958-2009</div>
+    <p class="description" style="margin-top:1.2rem;">
+      <strong>Michael Jackson</strong>, conocido como el "Rey del Pop", revolucionó la música y el espectáculo con su voz, baile y videoclips. Su álbum <i>Thriller</i> es el más vendido de la historia. Canciones como "Billie Jean" y "Beat It" marcaron generaciones.
+    </p>
+    <p>
+      <b>Álbum destacado:</b> <i>Thriller</i> (1982)<br>
+      <b>Canción icónica:</b> Billie Jean<br>
+      <b>Dato curioso:</b> Inventó el famoso paso "Moonwalk" y ganó 13 premios Grammy.
+    </p>
+    <div class="see-more" style="text-align:center;">
+      <a href="https://es.wikipedia.org/wiki/Michael_Jackson" target="_blank">Leer más en Wikipedia</a>
+    </div>
+  </div>
+
+  <div id="player-bar" style="position:fixed;left:0;right:0;bottom:0;background:#222;color:#fff;display:flex;align-items:center;gap:1rem;padding:0.5rem 1rem;z-index:1000;box-shadow:0 -2px 12px #0008;">
+    <img id="player-img" src="billiejean.jpg" alt="Michael Jackson" style="width:48px;height:48px;object-fit:cover;border-radius:8px;">
+    <div>
+      <div id="player-title" style="font-weight:bold;">Billie Jean</div>
+      <div id="player-meta" style="font-size:0.95em;opacity:0.7;">Michael Jackson · Álbum: Thriller (1982)</div>
+    </div>
+    <audio id="player-audio" controls style="flex:1;max-width:400px;margin:0 1rem;">
+      <source src="billiejean.mp3" type="audio/mp3">
+    </audio>
+    <button id="player-close" style="background:none;border:none;color:#fff;font-size:1.5em;cursor:pointer;">✕</button>
+  </div>
+  <footer>
+    &copy; 2025 - Sonidos del Ayer
+  </footer>
+    
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const playerBar = document.getElementById('player-bar');
+      const playerAudio = document.getElementById('player-audio');
+      const playerClose = document.getElementById('player-close');
+      playerAudio.volume = 0.5;
+      playerAudio.play().catch(()=>{});
+
+      playerClose.addEventListener('click', () => {
+        playerAudio.pause();
+        playerBar.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>

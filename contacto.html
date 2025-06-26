@@ -67,18 +67,23 @@
     </a>
   </div>
 </nav>
-  <form class="contact-form" autocomplete="off">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
-
-    <label for="correo">Correo electrónico:</label>
-    <input type="email" id="correo" name="correo" required>
-
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" required></textarea>
-
+  <form class="contact-form" action="https://formspree.io/f/mblyqryd" method="POST" autocomplete="off">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="message" required></textarea>
+    </div>
     <button type="submit">Enviar</button>
   </form>
   <footer style="margin-top: 7.9rem;">
     &copy; 2025 - Sonidos del Ayer
   </footer>
+</body>
+</html>
